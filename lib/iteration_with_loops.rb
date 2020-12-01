@@ -1,12 +1,14 @@
+require 'pry'
 def join_nested_strings(src)
-  total = []
+  total = ""
   outter = 0  
-    while src[outter] < src[outter].length do
 
+    while outter < src.count do
       inner = 0
-      while inner < src[outter][inner].length do 
-        if src[outter][inner].include? ""
-          total << src[outter][inner]
+      while inner < src[outter].count do 
+
+        if src[outter][inner].class == String
+          total << src[outter][inner] + " "
         end 
         inner += 1
       end 
